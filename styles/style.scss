@@ -1,0 +1,187 @@
+@import "simple-grid";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  padding: 1rem 0 2rem 0;
+  height: auto;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.shape {
+  width: 800px;
+  height: 800px;
+  position: relative;
+}
+
+#shape1 {
+  height: 900px;
+}
+
+hr {
+  border: 1px solid #262626;
+}
+
+.desc {
+  text-transform: uppercase;
+}
+
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.infocard {
+  border: 1px solid #535353;
+  border-radius: 20px;
+  padding: 24px;
+
+  .head {
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #535353;
+  }
+
+  &.sketchIds {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      width: 32px;
+      height: 24px;
+      line-height: 24px;
+      font-weight: 700;
+      border-radius: 3px;
+      margin-right: 5px;
+      background-color: #fff;
+      color: #000;
+
+      &.selected {
+        background-color: #F7CD01;
+      }
+    }
+  }
+}
+
+
+.drives {
+  color: #AEAEAE;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > div {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  span, a {
+    display: inline-block;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+
+    &.red {
+      border-color: #83024E;
+      color: #83024E;
+    }
+
+    &.yellow {
+      border-color: #F7CD01;
+      color: #F7CD01;
+    }
+
+    &.blue {
+      border-color: #7130BF;
+      color: #7130BF;
+    }
+
+    &.green {
+      border-color: #30BF4F;
+      color: #30BF4F;
+    }
+
+    &.white {
+      border-color: #fff;
+    }
+  }
+}
+
+.cardimages {
+  img {
+    border: 1px solid #535353;
+    border-radius: 20px;
+    transition: border-color 200ms ease-in-out;
+  }
+
+  a {
+    &:hover {
+      img {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.shape-page {
+
+}
+
+.shape {
+  canvas {
+    //border-radius: 50%;
+  }
+}
+
+#specs {
+  h4 {
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  div {
+    color: #7d95f3;
+
+    strong {
+      color: #e9fdfc;
+      display: inline-block;
+      margin-right: 10px;
+
+      &:after {
+        content: ":";
+      }
+    }
+  }
+}
+
+.selected-colors {
+  div {
+    width: 36px;
+    height: 36px;
+    //border: 1px solid #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+  }
+}
+
+iframe{
+  border: none;
+}

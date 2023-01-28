@@ -1,0 +1,50 @@
+{
+  "name": "artifact-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build-dev": "webpack --mode=development --watch",
+    "build": "webpack --mode=production",
+    "getdata": "node src/data/update-collections-data.js",
+    "getimgs": "node src/data/get-images-and-colors.js",
+    "organize": "node src/data/reorganize-data-and-colors.js",
+    "update": "npm run getdata && npm run getimgs && npm run organize && npm run build",
+    "demo-start": "http-server -c1",
+    "api-start": "node ./index.js",
+    "start": "http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bignumber.js": "^9.1.0",
+    "canvas": "^2.9.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "get-image-colors": "^4.0.1",
+    "http-server": "^14.1.1",
+    "jimp": "^0.16.1",
+    "jsdom": "^20.0.0",
+    "p5": "^1.4.2",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.3.6",
+    "window": "^4.2.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "lodash": "^4.17.21",
+    "node-sass": "^7.0.1",
+    "request": "^2.88.2",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

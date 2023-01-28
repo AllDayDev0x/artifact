@@ -1,0 +1,46 @@
+exports.colorshade = function (col, amt) {
+    var usePound = false;
+
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+
+    var num = parseInt(col, 16);
+
+    var r = (num >> 16) + amt;
+
+    if (r > 255) r = 255;
+    else if (r < 0) r = 0;
+
+    var b = ((num >> 8) & 0x00FF) + amt;
+
+    if (b > 255) b = 255;
+    else if (b < 0) b = 0;
+
+    var g = (num & 0x0000FF) + amt;
+
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+
+    let res = ((usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16));
+    console.log("res:", res);
+    return (res.toString() + "0000000000000").substring(0, (usePound ? 7 : 6));
+
+}
+
+
+function hex2(c) {
+    c = Math.round(c);
+    if (c < 0) c = 0;
+    if (c > 255) c = 255;
+
+    let s = c.toString(16);
+    if (s.length < 2) s = "0" + s;
+
+    return s;
+}
+
+function color(r, g, b) {
+    return "#" + hex2(r) + hex2(g) + hex2(b);
+}

@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "name": "artifact-api",
+  "builds" : [
+    {
+      "src": "index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+
+      "dest": "index.js"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Artifact Nft #1",
+    "description": "",
+    "hash": "",
+    "external_url": "",
+    "image": "",
+    "animation_url": "",
+    "background_color": "000000",
+    "attributes": [
+        {
+            "trait_type": "Trait 1",
+            "value": "Trait Value"
+        }
+   ]
+}
