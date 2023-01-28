@@ -94,6 +94,9 @@ app.get('/random/:sketchid', async (req, res) => {
 });
 
 // Get HTML
+app.get("/", (req,res)=> {
+    res.send("dfdfdfdf")
+})
 app.get('/generate/:sketchid/:hash', async (req, res) => {
 
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -262,5 +265,5 @@ app.get('/data/:jsonPath', async (req, res) => {
 app.get('/favicon.ico', (req, res) => res.status(204).send('No content'));
 
 // Server Start
-// app.listen(3000, () => console.log(`Artifact NFT App listening on port 3000!`));
+app.listen(3000, () => console.log(`Artifact NFT App listening on port 3000!`));
 module.exports = app;
