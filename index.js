@@ -95,7 +95,7 @@ app.use(cors({
 
 // // Get HTML
 app.get("/", (req,res)=> {
-    res.send("dfdfdfdf")
+    res.send("dfdfddddddddddddddddddddddddddddddddddddfdf")
 })
 // app.get('/generate/:sketchid/:hash', async (req, res) => {
 
