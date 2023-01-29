@@ -14,7 +14,7 @@
     "demo-start": "http-server -c1",
     "api-start": "node ./index.js",
     "start": "vercel dev",
-    "vercel-build": "yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/ && npm run build"
+    "vercel-build":"yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build"
   },
   "author": "",
   "license": "ISC",
