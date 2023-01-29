@@ -221,7 +221,6 @@ app.get('/image/:type/:sketchid/:hash\.png', async (req, res) => {
         return res.status(400).send('Bad request!')
     }
 });
-
 // Reset
 app.get('/reset-all-generated-files', async (req, res) => {
     rimraf.sync('./temp/generate/!*.html');
