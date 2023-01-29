@@ -13,7 +13,7 @@
     "update": "npm run getdata && npm run getimgs && npm run organize && npm run build",
     "demo-start": "http-server -c1",
     "api-start": "node ./index.js",
-    "start": "http-server"
+    "start": "vercel dev"
   },
   "author": "",
   "license": "ISC",
