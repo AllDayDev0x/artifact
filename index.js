@@ -10,7 +10,7 @@
 // imports
 // const fs = require('fs');
 // const path = require('path');
-// const cors = require('cors');
+const cors = require('cors');
 // const rimraf = require('rimraf');
 const express = require('express');
 // const getHash = require("./src/api/tools.js");
