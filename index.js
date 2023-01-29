@@ -229,7 +229,9 @@ app.get('/reset-all-generated-files', async (req, res) => {
     rimraf.sync('./temp/high-res/!*.png');
     res.status(400).send('!')
 });
-
+app.get("/", async (req, res) => {
+    res.send("ok")
+})
 // Json Data
 app.get('/data/:jsonPath', async (req, res) => {
     let jsonPath = req.params.jsonPath;
