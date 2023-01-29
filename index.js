@@ -197,6 +197,7 @@ app.get('/image/:type/:sketchid/:hash\.png', async (req, res) => {
             return res.status(500).send(error);
         }
         if (filePath) {
+            
             try {
                 res.type('.png');
                 res.set({'Content-Type': 'image/png'});
