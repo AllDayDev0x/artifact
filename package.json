@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build-dev": "webpack --mode=development --watch",
-    "build": "./setup.sh && webpack --mode=production",
+    "build": "yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/ && webpack --mode=production",
     "getdata": "node src/data/update-collections-data.js",
     "getimgs": "node src/data/get-images-and-colors.js",
     "organize": "node src/data/reorganize-data-and-colors.js",
