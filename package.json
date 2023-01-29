@@ -13,8 +13,7 @@
     "update": "npm run getdata && npm run getimgs && npm run organize && npm run build",
     "demo-start": "http-server -c1",
     "api-start": "node ./index.js",
-    "start": "vercel dev",
-    "vercel-build":"yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/ && npm run build"
+    "start": "vercel dev"
   },
   "author": "",
   "license": "ISC",
